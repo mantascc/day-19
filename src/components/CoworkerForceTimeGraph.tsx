@@ -322,8 +322,8 @@ export default function CoworkerForceTimeGraph() {
     <div className="w-full h-full min-h-[640px] bg-[#0f0f12] text-zinc-200">
       <div className="flex flex-wrap items-center justify-between gap-3 p-3 border-b border-zinc-800/70 sticky top-0 bg-[#0f0f12]/95 backdrop-blur">
         <div className="flex items-center gap-2">
-          <span className="text-sm uppercase tracking-widest text-zinc-400">Coworker Network • Force × Time</span>
-          <span className="text-xs text-zinc-500">agent-stage</span>
+          <span className="text-sm uppercase tracking-widest text-zinc-400">Coworker collaboration over time</span>
+          <span className="text-xs text-zinc-500">v1</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <label className="px-2 py-1 rounded-xl bg-zinc-900/70 border border-zinc-800 cursor-pointer">
@@ -334,7 +334,7 @@ export default function CoworkerForceTimeGraph() {
             Load edges CSV
             <input type="file" accept=".csv" className="hidden" onChange={(e) => e.target.files && handleLoadEdges(e.target.files[0])} />
           </label>
-          <button onClick={generateDemo} className="px-2 py-1 rounded-xl bg-zinc-900/70 border border-zinc-800">Demo</button>
+          <button onClick={generateDemo} className="px-2 py-1 rounded-xl bg-zinc-900/70 border border-zinc-800">Start Demo</button>
         </div>
       </div>
 
@@ -402,9 +402,9 @@ export default function CoworkerForceTimeGraph() {
       <div className="px-3 pb-4 text-xs text-zinc-400">
         <div className="flex flex-wrap items-center gap-2">
           <span className="uppercase tracking-widest">Legend</span>
-          <span>• Line opacity/width ≈ collaboration intensity</span>
-          <span>• Node core is 2×2 pixel (agent)</span>
-          <span>• Glow tint ≈ team</span>
+          <span>• Hover to see coworker details</span>
+          <span>• Node = coworker</span>
+          <span>• Color = team</span>
         </div>
       </div>
     </div>
